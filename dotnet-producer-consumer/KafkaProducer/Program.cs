@@ -15,5 +15,5 @@ while(true) {
     DeliveryResult<Null, string> response = await producer.ProduceAsync(topic, new Message<Null, String> { Value = message });
     Console.WriteLine(response.Value);
 
-    await Task.Delay(60_000);
+    await Task.Delay(1_000);
 }
