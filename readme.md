@@ -1,4 +1,8 @@
-# 
+# My personal Kafka materials
+
+## Current state of the affairs
+
+Steps below document how a simple minikube kafka environment can be setup. This if not a production grade solution, of course.
 
 ## Initial requirements (on Windows):
 
