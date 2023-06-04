@@ -1,3 +1,5 @@
+# Source: https://docs.confluent.io/operator/current/co-quickstart.html#co-quickstart
+
 kubectl create namespace confluent
 kubectl config set-context --current --namespace confluent
 
