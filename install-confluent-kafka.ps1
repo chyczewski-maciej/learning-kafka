@@ -12,5 +12,5 @@ helm upgrade --install confluent-operator confluentinc/confluent-for-kubernetes
 kubectl apply -f https://raw.githubusercontent.com/confluentinc/confluent-kubernetes-examples/master/quickstart-deploy/confluent-platform.yaml
 
 # Install sample producer app and topic
-kubectl apply -f https://raw.githubusercontent.com/confluentinc/confluent-kubernetes-examples/master/quickstart-deploy/producer-app-data.yaml
+# kubectl apply -f https://raw.githubusercontent.com/confluentinc/confluent-kubernetes-examples/master/quickstart-deploy/producer-app-data.yaml
 kubectl config set-context --current --namespace default

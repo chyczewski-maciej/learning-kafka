@@ -20,4 +20,6 @@ Steps below document how a simple minikube kafka environment can be setup. This 
 3. Install confluent kafka using `install-confluent-kafka.ps1` script. This is mostly based on the [Confluent for Kubernetes Quickstart](https://docs.confluent.io/operator/current/co-quickstart.html#co-quickstart)
 4. Install telepresence in the cluster using `install-telepresence.ps1` script
 5. Connect to the cluster using telepresence using `telepresence connect` command
-6. Start demo .net project using `dotnet run` in `./dotnet-producer-consumer/KafkaProducer` dir
+6. Go to `http://controlcenter.confluent:9021/clusters` and create topic named `sample-topic`
+7. Start demo .net producer using `dotnet run` in `./dotnet-producer-consumer/KafkaProducer` dir
+8. Start demo .net consumer using `dotnet run` in `./dotnet-producer-consumer/KafkaConsumer` dir

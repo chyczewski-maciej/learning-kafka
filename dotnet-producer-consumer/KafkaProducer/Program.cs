@@ -5,15 +5,15 @@ ProducerConfig config = new ProducerConfig {
     ClientId = "test-producer"
 };
 
-ProducerBuilder<Null, string> producerBuilder = new ProducerBuilder<Null, string>(config);
-IProducer<Null, string> producer = producerBuilder.Build();
+using IProducer<Null, Int32> producer = new ProducerBuilder<Null, Int32>(config).Build();
 
-var topic = "some-topic";
+String topic = "sample-topic";
+Random random = new Random();
 
 while(true) {
-    var message = $"Hello World at {DateTime.Now}";
-    DeliveryResult<Null, string> response = await producer.ProduceAsync(topic, new Message<Null, String> { Value = message });
+    Int32 message = random.Next(1, 40);
+    DeliveryResult<Null, Int32> response = await producer.ProduceAsync(topic, new Message<Null, Int32> { Value = message });
     Console.WriteLine(response.Value);
 
-    await Task.Delay(1_000);
+    await Task.Delay(100);
 }
